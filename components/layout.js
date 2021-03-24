@@ -11,16 +11,18 @@ const Layout = ({ children, home }) => {
         <Link href="/">
           <a style={{ fontSize: "3rem" }}>SD.</a>
         </Link>
-        <Link href="/projects">
-          <a>Projects</a>
-        </Link>
-
-        <Link href="/about-me">
-          <a>More About Me</a>
-        </Link>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
+        <div className={styles.navLinks}>
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>
+          
+          <Link href="/about-me">
+            <a>Biography</a>
+          </Link>
+          <Link href="/contact">
+            <a>Contact</a>
+          </Link>
+        </div>
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}> This is footer Section</footer>

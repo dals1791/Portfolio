@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 // CSS Modules==================================
 import styles from "../styles/home.module.css";
 import utilityStyle from "../styles/utility.module.css";
+import buttonStyles from '../styles/button.module.css'
 
 export default function Home() {
   return (
@@ -13,7 +14,6 @@ export default function Home() {
         <title>Sean's Portfolio</title>
       </Head>
       <div className={styles.container}>
-        <header></header>
         <div className={styles.me}>
           <Image
             src="/images/me.jpg"
@@ -24,10 +24,18 @@ export default function Home() {
             alt="Sean Daly"
           />
         </div>
-        <h1>Hi I'm Sean!</h1>
-        <p>Fullstack Developer and Engineer</p>
-        <Link href="/projects"><a>Projects</a></Link>
+        <div className={styles.brandContainer}>
+          <h1>Hi I'm Sean!</h1>
+
+          <div className={styles.brand}>
+            <p>Fullstack Developer and Engineer</p>
+          </div>
+        </div>
+        <Link href="/projects">
+          <a className={buttonStyles.button}>Projects</a>
+        </Link>
       </div>
+      
     </div>
   );
 }
