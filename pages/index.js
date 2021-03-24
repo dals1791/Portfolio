@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 // CSS Modules==================================
 import styles from "../styles/home.module.css";
 import utilityStyle from "../styles/utility.module.css";
-import buttonStyles from '../styles/button.module.css'
+import buttonStyles from "../styles/button.module.css";
 
 export default function Home() {
   return (
@@ -35,7 +35,6 @@ export default function Home() {
           <a className={buttonStyles.button}>Projects</a>
         </Link>
       </div>
-      
     </div>
   );
 }
