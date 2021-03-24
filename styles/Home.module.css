@@ -3,8 +3,9 @@
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  margin-top: 10vh;
 }
 
 .me {
@@ -12,6 +13,7 @@
   border-radius: 9999px;
   width: 50%;
   margin: 1rem;
+
   align-self: center;
 }
 .brandContainer {
@@ -23,10 +25,10 @@
 }
 .brandContainer h1 {
   align-self: flex-start;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem .5rem;
 }
 .brand {
-  margin: 0 0 0 2rem;
+  margin: 0 .5rem 0 0;
   text-align: right;
 }
 .brand p {
