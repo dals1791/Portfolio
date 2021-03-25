@@ -1,0 +1,16 @@
+.skills {
+  width: 100vw;
+  /* border: 1px solid; */
+  animation: float 5s linear infinite;
+}
+@keyframes float {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: -20%;
+    width: 100%;
+  }
+}

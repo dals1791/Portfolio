@@ -9,7 +9,7 @@ const Layout = ({ children, home }) => {
     <>
       <header className={styles.header}>
         <Link href="/">
-          <a style={{ fontSize: "3rem" }}>SD.</a>
+          <a style={{ fontSize: "3rem", color: "rgba(28,231,131, 1)"}}>SD.</a>
         </Link>
         <div className={styles.navLinks}>
           <Link href="/projects">
@@ -25,7 +25,7 @@ const Layout = ({ children, home }) => {
         </div>
       </header>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}> This is footer Section</footer>
+      {/* <footer className={styles.footer}> This is footer Section</footer> */}
     </>
   );
 };

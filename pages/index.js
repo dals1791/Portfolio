@@ -25,7 +25,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.brandContainer}>
-          <h1>Hi I'm Sean!</h1>
+          <h1>Hi I'm <span className={styles.name} >Sean</span>!</h1>
 
           <div className={styles.brand}>
             <p>Fullstack Developer and Engineer</p>
