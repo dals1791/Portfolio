@@ -1,0 +1,12 @@
+.frontend, .backend{
+    display: grid;
+    width: 100vw;
+    padding: 0 .5rem;
+
+}
+.frontendSkills, .backendSkills{
+    display: flex;
+    justify-content: space-around;
+   
+   
+}
