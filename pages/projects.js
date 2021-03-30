@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Skills from "../components/skills"
+import ProjectCard from '../components/projectCard'
 import styles from "../styles/projects.module.css";
 
 const Projects = () => {
@@ -9,10 +10,11 @@ const Projects = () => {
       <Head>
         <title>Sean's Projects</title>
       </Head>
-      <h1>This is the Projects</h1>
+      
       <div className={styles.container}>
+        <div className={styles.sortBar}><h4>Sort bar</h4></div>
         <main className={styles.main}>
-          {/* section for project cards */}
+          <ProjectCard/>
         </main>
         <div className={styles.skills}>
           {/* All Icons are from "https://icons8.com" */}
