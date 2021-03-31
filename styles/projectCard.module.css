@@ -1,6 +1,56 @@
-.cardBody{
-    width: 25%;
-    height: 50vh;
+.cardContainer{
+    width: 250px;
+    height: 40vh;
     border:1px solid;
-    margin: 2%;
+    margin: 2% auto;
+    display: flex;
 }
+.imgContainer{
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.imgContainer:hover .cardText{
+    box-shadow: inset 0 0 0 300px rgba(0,0,0, 0.7), 0px 0px 24px rgba(126, 202, 156, 1);
+    display: flex;
+}
+
+.cardText{
+ display: none;
+ flex-wrap: wrap;
+  width: 100%; 
+  height: 100%;
+  text-align: center;
+  padding: .5rem;
+  margin: 0;
+}
+.cardText p{
+    margin: 0;
+}
+@media (min-width: 375px){
+    .cardContainer{
+        
+    }
+}
+@media (min-width: 768px){
+    .cardContainer{
+        width: 250px;
+        
+    }
+}
+@media (min-width: 1024px){
+    .cardContainer{
+        width: 300px;
+        
+    }
+}
+@media (min-width: 1440px){
+    .cardContainer{
+       
+    }
+}
+
+
