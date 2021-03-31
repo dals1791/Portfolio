@@ -7,12 +7,14 @@
 }
 .sortBar{
   border: 1px solid;
+ height: 5vh;
+}
+.sortBar h4{
+  margin: 0;
 }
 .main{
    display: flex;
 }
-
-
 .skills {
   align-self: center;
 }
