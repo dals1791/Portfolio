@@ -36,9 +36,11 @@ const ProjectCard = ()=>{
                     </div>
                     
                 </div>
+                
             </div>
             <div className={styles.cardInfoContainer}>
                 <h2 className={styles.cardTitle}>Title</h2>
+                {toggle? <button className={styles.descriptionButton} onClick={handleToggle}>Remove</button> :<button className={styles.descriptionButton} onClick={handleToggle}>Description</button>}
                 <button className={styles.cardButton}>Live</button>
                 <button className={styles.cardButton}>Github</button>
             </div>
