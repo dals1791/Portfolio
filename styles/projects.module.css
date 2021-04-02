@@ -14,8 +14,15 @@
 }
 .main{
    display: flex;
+   flex-direction: column;
+   
 }
 .skills {
   align-self: center;
+}
+@media (min-width: 375px) {
+  .main {
+    flex-direction: row;
+  }
 }
 

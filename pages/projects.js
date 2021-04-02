@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Skills from "../components/skills"
 import ProjectCard from '../components/projectCard'
 import styles from "../styles/projects.module.css";

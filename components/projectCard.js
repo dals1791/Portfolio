@@ -5,80 +5,98 @@ import Image from "next/image";
 const ProjectCard = (props) => {
   const { data } = props;
   const [toggle, setToggle] = useState(false);
+  const [title, setTitle] = useState(null);
   let display = { display: "none", box: "none" };
-  const handleToggle = () => {
+
+  const handleToggle = (id) => {
     setToggle((toggle) => !toggle);
+    setTitle(id);
   };
-  if (toggle) {
-    display.display = "flex";
-    display.box =
-      "inset 0 0 0 200px rgba(0,0,0, 0.85), 0px 0px 24px rgba(126, 202, 156, 1)";
-  } else {
-    display.display = "none";
-    display.box = "none";
-  }
+
   const renderCards = () => {
     return data.map((project) => {
       const fields = project.fields;
       const img = fields.img.fields.file.url;
-      console.log(fields)
+      const frontTech = fields.frontendTech.map((skill) => {
+        return <p className={styles.cardSkills}> {skill} </p>;
+      });
+      const backTech = fields.backendTech.map((skill) => {
+        return <p className={styles.cardSkills}>{skill} </p>;
+      });
+
+      if (toggle) {
+        display.display = "flex";
+        display.box =
+          "inset 0 0 0 200px rgba(0,0,0, 0.85), 0px 0px 24px rgba(126, 202, 156, 1)";
+      } else {
+        display.display = "none";
+        display.box = "none";
+      }
+
+      console.log(title, fields.title);
       return (
-        <>
+        <div key={fields.title} className={styles.cardContainer}>
           <div
             className={styles.imgContainer}
             style={{
               backgroundImage: `url(${img})`,
             }}
-            onClick={handleToggle}
+            onClick={() => handleToggle(fields.title)}
           >
             <div
               className={styles.cardText}
               style={{
-                display: `${display.display}`,
+                display: fields.title === title ? `${display.display}` : "none",
                 boxShadow: `${display.box}`,
               }}
             >
               <div className={styles.cardDescription}>
-                <p>
-                  {fields.description}
-                </p>
+                <p>{fields.description}</p>
               </div>
               <div>
                 <h4>Frontend Tech:</h4>
-                <p>React.js</p>
+                {frontTech}
                 <h4>Backend Tech:</h4>
-                <p>React.js</p>
+                {backTech}
               </div>
             </div>
           </div>
           <div className={styles.cardInfoContainer}>
             <h2 className={styles.cardTitle}>{fields.title}</h2>
             <button className={styles.descriptionButton}>Preview</button>
-            {toggle ? (
-              <button
-                className={styles.descriptionButton}
-                onClick={handleToggle}
-              >
+            {toggle && fields.title===title ? (<button className={styles.descriptionButton} onClick={() => handleToggle(fields.title)}>
                 X
               </button>
             ) : (
               <button
                 className={styles.descriptionButton}
-                onClick={handleToggle}
+                onClick={() => handleToggle(fields.title)}
               >
                 Info
               </button>
             )}
-            <a href={fields.livelink} className={styles.cardButton} target="_blank">Live</a>
-            <a href={fields.github} className={styles.cardButton} target="_blank">Github</a>
+            <a
+              href={fields.livelink}
+              className={styles.cardButton}
+              target="_blank"
+            >
+              Live
+            </a>
+            <a
+              href={fields.github}
+              className={styles.cardButton}
+              target="_blank"
+            >
+              Github
+            </a>
           </div>
-        </>
+        </div>
       );
     });
   };
 
   const background = "https://i.imgur.com/aNz6wUl.jpg?1";
-  return <div className={styles.cardContainer}>{renderCards()}</div>;
+  return <>{renderCards()} </>;
 };
 
 export default ProjectCard;

@@ -18,7 +18,7 @@
 }
 
 .cardText {
-  font-size: 0.8em;
+  font-size: 0.7em;
   width: 100%;
   height: 100%;
   justify-content: space-between;
@@ -33,9 +33,15 @@
   text-align: center;
   padding: 0.5rem;
 }
+.cardSkills{
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
 .cardText p,
 .cardText h4 {
   margin: 0;
+  width: fit-content;
 }
 .imgContainer:hover .cardText {
   box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.85),
