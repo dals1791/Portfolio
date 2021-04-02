@@ -8,12 +8,14 @@ import utilityStyle from "../styles/utility.module.css";
 import buttonStyles from "../styles/button.module.css";
 
 export default function Home() {
+  console.log('helloe')
   return (
     <div>
       <Head>
         <title>Sean's Portfolio</title>
       </Head>
       <div className={styles.container}>
+       
         <div className={styles.me}>
           <Image
             src="/images/me.jpg"
