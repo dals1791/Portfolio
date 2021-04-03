@@ -25,14 +25,16 @@ const Carousel = ({ data }) => {
             <ProjectCard data={data} current={current} />
           </div>
         </div>
+<div className={styles.carouselButtonContainer}>
+        <button className={styles.leftArrow} onClick={prevCard}>
+          left
+        </button>
+        <button className={styles.rightArrow} onClick={nextCard}>
+          {" "}
+          right{" "}
+        </button>
+        </div>
       </div>
-      <button className={styles.leftArrow} onClick={prevCard}>
-        left
-      </button>
-      <button className={styles.rightArrow} onClick={nextCard}>
-        {" "}
-        right{" "}
-      </button>
     </>
   );
 };

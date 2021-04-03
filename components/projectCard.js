@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/projectCard.module.css";
 import Image from "next/image";
 
@@ -6,6 +6,7 @@ const ProjectCard = (props) => {
   const { data, current } = props;
   const [toggle, setToggle] = useState(false);
   const [title, setTitle] = useState(null);
+  const [size, setSize]=useState(1)
   let display = { display: "none", box: "none" };
 
   const handleToggle = (id) => {
@@ -32,10 +33,21 @@ const ProjectCard = (props) => {
         display.display = "none";
         display.box = "none";
       }
-      console.log(current)
+      const handleWindow =()=>{
+        if(window.innerWidth>=768){
+          setSize(2)
+        }
+           else{
+          setSize(1)
+        }
+      }
+      useEffect(()=>{handleWindow()
+
+      }, [window.innerWidth])
+      console.log(size)
       return (
         <>
-         <div key={fields.title} className={styles.cardContainer} style={{ transform: `translateX(-${current * 100/3}%)` }}>
+         <div key={fields.title} className={styles.cardContainer} style={{ transform: `translateX(-${current * 106}%)` }}>
           <div
             className={styles.imgContainer}
             style={{

@@ -1,21 +1,21 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100%;
-    justify-content: space-between;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  justify-content: space-between;
 }
-.sortBar{
+.sortBar {
   border: 1px solid;
- height: 5vh;
+  height: 5vh;
 }
-.sortBar h4{
+.sortBar h4 {
   margin: 0;
 }
-/* .main{
-   display: flex;
-   flex-direction: row;
-   
+/* .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 } */
 .skills {
   align-self: center;
@@ -25,4 +25,3 @@
     flex-direction: row;
   } */
 }
-

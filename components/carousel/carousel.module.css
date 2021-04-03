@@ -1,33 +1,40 @@
 .carouselContainer {
-  width: 100%;
+    width: 100%;
+    margin: 0 auto;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   overflow: hidden;
 }
-.carouselContentWrapper {
-    display: flex;
-    align-items:  flex-start;
-    max-width: 100vw;
-}
-
 .carouselContent {
-  display:flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  
-  margin: 0 auto;
-  border: 1px solid;
-  
+   
 }
-.contentWrapper{
-   display: flex;
-   flex-direction: row;
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100%/2);
+  height: 100%;
 }
-
+.carouselButtonContainer{
+    display: flex;
+    flex-direction: row;
+}
 .leftArrow,
 .rightArrow {
   height: 10%;
   width: fit-content;
   align-self: flex-end;
 }
+
+@media (min-width: 1024px) {
+    .carouselContainer {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 1440px) {
+    .carouselContainer {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
