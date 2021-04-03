@@ -12,17 +12,17 @@
 .sortBar h4{
   margin: 0;
 }
-.main{
+/* .main{
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    
-}
+} */
 .skills {
   align-self: center;
 }
 @media (min-width: 375px) {
-  .main {
+  /* .main {
     flex-direction: row;
-  }
+  } */
 }
 

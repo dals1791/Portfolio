@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Head from "next/head";
 import Layout from "../components/layout/layout";
 import Skills from "../components/skills"
+import Carousel from '../components/carousel/carousel'
 import ProjectCard from '../components/projectCard'
 import styles from "../styles/projects.module.css";
 import {createClient} from 'contentful'
@@ -33,13 +34,13 @@ useEffect(()=>{const getProjects=async()=>{
       <div className={styles.container}>
         <div className={styles.sortBar}><h4>Sort bar</h4></div>
         <main className={styles.main}>
-          <ProjectCard data={projects}/>
+         <Carousel data={projects}/> 
         </main>
         <div className={styles.skills}>
           {/* All Icons are from "https://icons8.com" */}
-          <h3 style={{margin: "0"}}>Skills</h3>
-          <hr />
-          {<Skills/>}
+          {/* <h3 style={{margin: "0"}}>Skills</h3>
+          <hr /> */}
+          {/* {<Skills/>} */}
           </div>
       </div>
     </Layout>

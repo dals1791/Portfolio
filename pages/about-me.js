@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
+import Carousel from '../components/carousel/carousel'
 
 const AboutMe = () => {
   return (
@@ -10,7 +11,7 @@ const AboutMe = () => {
         <Head>
           <title>Sean's Bio</title>
         </Head>
-        <h1>This is About Me</h1>
+       
       </Layout>
     </>
   );

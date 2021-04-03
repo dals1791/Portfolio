@@ -3,7 +3,7 @@ import styles from "../styles/projectCard.module.css";
 import Image from "next/image";
 
 const ProjectCard = (props) => {
-  const { data } = props;
+  const { data, current } = props;
   const [toggle, setToggle] = useState(false);
   const [title, setTitle] = useState(null);
   let display = { display: "none", box: "none" };
@@ -14,7 +14,7 @@ const ProjectCard = (props) => {
   };
 
   const renderCards = () => {
-    return data.map((project) => {
+    return data.map((project, index) => {
       const fields = project.fields;
       const img = fields.img.fields.file.url;
       const frontTech = fields.frontendTech.map((skill) => {
@@ -32,10 +32,10 @@ const ProjectCard = (props) => {
         display.display = "none";
         display.box = "none";
       }
-
-      console.log(title, fields.title);
+      console.log(current)
       return (
-        <div key={fields.title} className={styles.cardContainer}>
+        <>
+         <div key={fields.title} className={styles.cardContainer} style={{ transform: `translateX(-${current * 100/3}%)` }}>
           <div
             className={styles.imgContainer}
             style={{
@@ -91,6 +91,8 @@ const ProjectCard = (props) => {
             </a>
           </div>
         </div>
+           
+            </>
       );
     });
   };

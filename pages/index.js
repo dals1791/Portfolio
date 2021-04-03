@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Layout from "../components/layout";
 // CSS Modules==================================
 import styles from "../styles/home.module.css";
 import utilityStyle from "../styles/utility.module.css";
 import buttonStyles from "../styles/button.module.css";
 
 export default function Home() {
-  console.log('helloe')
+  
   return (
     <div>
       <Head>
