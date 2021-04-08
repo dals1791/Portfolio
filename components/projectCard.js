@@ -8,15 +8,15 @@ const ProjectCard = (props) => {
   const [title, setTitle] = useState(null);
   const [size, setSize]=useState(1)
   let display = { display: "none", box: "none" };
-
+ 
   const handleToggle = (id) => {
     setToggle((toggle) => !toggle);
     setTitle(id);
   };
 
   const renderCards = () => {
-    return data.map((project, index) => {
-      const fields = project.fields;
+    return data.map((entry, index) => {
+      const fields = entry.fields;
       const img = fields.img.fields.file.url;
       const frontTech = fields.frontendTech.map((skill) => {
         return <p className={styles.cardSkills}> {skill} </p>;

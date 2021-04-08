@@ -40,7 +40,3 @@ const Carousel = ({ data }) => {
 };
 
 export default Carousel;
-{
-}
-{
-}

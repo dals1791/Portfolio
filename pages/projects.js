@@ -4,6 +4,7 @@ import Layout from "../components/layout/layout";
 import Skills from "../components/skills"
 import Carousel from '../components/carousel/carousel'
 import ProjectCard from '../components/projectCard'
+import Sort from '../components/sort/sort'
 import styles from "../styles/projects.module.css";
 import {createClient} from 'contentful'
 
@@ -13,18 +14,30 @@ const client = createClient({
 })
 const Projects = () => {
     const [projects, setProjects] = useState([])
+    const [skills, setSkills] = useState([])
   
-  const getStaticProps = async()=>{
-    const entries = await client.getEntries()
-    if (entries.items) return entries.items
+  const getProjectProps = async()=>{
+    const projects = await client.getEntries({
+      content_type: 'project'
+    })
+    if (projects.items) return projects.items
+  }
+  const getSkillsProps = async()=>{
+    const skills = await client.getEntries({
+      content_type: 'skills'
+    })
+    if (skills.items) return skills.items
   }
 useEffect(()=>{const getProjects=async()=>{
-  const allProjects = await getStaticProps()
+  const allProjects = await getProjectProps()
+  const allSkills = await getSkillsProps()
   setProjects([...allProjects])
+  setSkills([...allSkills])
   } 
     getProjects()
   }, [])
-  
+  console.log("This is is projects", projects)
+  console.log("this is skills", skills)
   return (
     <Layout>
       <Head>
@@ -32,7 +45,9 @@ useEffect(()=>{const getProjects=async()=>{
       </Head>
       
       <div className={styles.container}>
-        <div className={styles.sortBar}><h4>Sort bar</h4></div>
+        <div className={styles.sortBar}>
+          <Sort/>
+          </div>
         <main className={styles.main}>
          <Carousel data={projects}/> 
         </main>
