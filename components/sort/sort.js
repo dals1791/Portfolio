@@ -7,9 +7,9 @@ const Sort = (props) => {
   const handleToggle = () => {
     setToggle((toggle) => !toggle);
   };
-  const handleCurrent =()=>{
+  const handleCurrent = () => {
     setCurrent(0);
-  }
+  };
 
   const getSkills = () => {
     return data.map((ele) => {
@@ -20,7 +20,9 @@ const Sort = (props) => {
             <button
               className={styles.sortButton}
               onClick={() => {
-                sort(skill);handleToggle();handleCurrent();
+                sort(skill);
+                handleToggle();
+                handleCurrent();
               }}
               key={index}
             >
@@ -41,24 +43,28 @@ const Sort = (props) => {
         <div className={styles.dropdownSkillContainer}>
           <button
             className={styles.sortButton}
-            onClick={() => {sort("All"); handleToggle();handleCurrent();}}>
+            onClick={() => {
+              sort("All");
+              handleToggle();
+              handleCurrent();
+            }}
+          >
             All
           </button>
           {getSkills()}
         </div>
       ) : null}
       <div className={styles.skillContainer}>
-      <button
-        className={styles.sortButton}
-        onClick={() => {
-          sort("All");
-        }}
-      >
-        All
-      </button>
-      {getSkills()}
+        <button
+          className={styles.sortButton}
+          onClick={() => {
+            sort("All");
+          }}
+        >
+          All
+        </button>
+        {getSkills()}
       </div>
-      
     </>
   );
 };

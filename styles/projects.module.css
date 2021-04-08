@@ -15,17 +15,9 @@
   flex-wrap: wrap;
   margin: 0 auto;
 }
-.sortBar h4 {
-  margin: 0;
-  
-}
 .main {
   display: flex;
-  
 }
 .skills {
   align-self: center;
-}
-@media (min-width: 375px) {
-  
 }

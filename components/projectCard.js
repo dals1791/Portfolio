@@ -6,9 +6,8 @@ const ProjectCard = (props) => {
   const { data, current } = props;
   const [toggle, setToggle] = useState(false);
   const [title, setTitle] = useState(null);
-  const [size, setSize]=useState(1)
   let display = { display: "none", box: "none" };
- 
+
   const handleToggle = (id) => {
     setToggle((toggle) => !toggle);
     setTitle(id);
@@ -18,11 +17,20 @@ const ProjectCard = (props) => {
     return data.map((entry, index) => {
       const fields = entry.fields;
       const img = fields.img.fields.file.url;
-      const frontTech = fields.frontendTech.map((skill) => {
-        return <p className={styles.cardSkills}> {skill} </p>;
+      const frontTech = fields.frontendTech.map((skill, index) => {
+        return (
+          <p key={index} className={styles.cardSkills}>
+            {" "}
+            {skill}{" "}
+          </p>
+        );
       });
-      const backTech = fields.backendTech.map((skill) => {
-        return <p className={styles.cardSkills}>{skill} </p>;
+      const backTech = fields.backendTech.map((skill, index) => {
+        return (
+          <p key={index} className={styles.cardSkills}>
+            {skill}{" "}
+          </p>
+        );
       });
 
       if (toggle) {
@@ -33,67 +41,75 @@ const ProjectCard = (props) => {
         display.display = "none";
         display.box = "none";
       }
-    
+
       return (
         <>
-         <div key={fields.title} className={styles.cardContainer} style={{ transform: `translateX(-${current * 106}%)` }}>
           <div
-            className={styles.imgContainer}
-            style={{
-              backgroundImage: `url(${img})`,
-            }}
-            onClick={() => handleToggle(fields.title)}
+            key={fields.title}
+            className={styles.cardContainer}
+            style={{ transform: `translateX(-${current * 106}%)` }}
           >
             <div
-              className={styles.cardText}
+              className={styles.imgContainer}
               style={{
-                display: fields.title === title ? `${display.display}` : "none",
-                boxShadow: `${display.box}`,
+                backgroundImage: `url(${img})`,
               }}
+              onClick={() => handleToggle(fields.title)}
             >
-              <div className={styles.cardDescription}>
-                <p>{fields.description}</p>
-              </div>
-              <div>
-                <h4>Frontend Tech:</h4>
-                {frontTech}
-                <h4>Backend Tech:</h4>
-                {backTech}
+              <div
+                className={styles.cardText}
+                style={{
+                  display:
+                    fields.title === title ? `${display.display}` : "none",
+                  boxShadow: `${display.box}`,
+                }}
+              >
+                <div className={styles.cardDescription}>
+                  <p>{fields.description}</p>
+                </div>
+                <div>
+                  <h4>Frontend Tech:</h4>
+                  {frontTech}
+                  <h4>Backend Tech:</h4>
+                  {backTech}
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.cardInfoContainer}>
-            <h2 className={styles.cardTitle}>{fields.title}</h2>
-            <button className={styles.descriptionButton}>Preview</button>
-            {toggle && fields.title===title ? (<button className={styles.descriptionButton} onClick={() => handleToggle(fields.title)}>
-                X
-              </button>
-            ) : (
-              <button
-                className={styles.descriptionButton}
-                onClick={() => handleToggle(fields.title)}
+            <div className={styles.cardInfoContainer}>
+              <h2 className={styles.cardTitle}>{fields.title}</h2>
+              <button className={styles.descriptionButton}>Preview</button>
+              {toggle && fields.title === title ? (
+                <button
+                  className={styles.descriptionButton}
+                  onClick={() => handleToggle(fields.title)}
+                >
+                  X
+                </button>
+              ) : (
+                <button
+                  className={styles.descriptionButton}
+                  onClick={() => handleToggle(fields.title)}
+                >
+                  More Info
+                </button>
+              )}
+              <a
+                href={fields.livelink}
+                className={styles.cardButton}
+                target="_blank"
               >
-                More Info
-              </button>
-            )}
-            <a
-              href={fields.livelink}
-              className={styles.cardButton}
-              target="_blank"
-            >
-              Live Link
-            </a>
-            <a
-              href={fields.github}
-              className={styles.cardButton}
-              target="_blank"
-            >
-              Github
-            </a>
+                Live Link
+              </a>
+              <a
+                href={fields.github}
+                className={styles.cardButton}
+                target="_blank"
+              >
+                Github
+              </a>
+            </div>
           </div>
-        </div>
-           
-            </>
+        </>
       );
     });
   };

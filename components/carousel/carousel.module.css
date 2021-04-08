@@ -15,14 +15,18 @@
 .carouselButtonContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .leftArrow,
 .rightArrow {
   height: 10%;
   width: fit-content;
   align-self: flex-end;
+  margin: 0.5rem;
+  font-size: 24px;
 }
-.arrowDesktop{
+.arrowDesktop {
   display: none;
   justify-content: space-around;
   align-items: center;
@@ -31,8 +35,6 @@
   margin: auto auto;
   width: 100px;
   height: 20rem;
-  background: rgba(0,0,0,.6);
-  color: white;
   border-radius: 1rem;
 }
 @media (min-width: 375px) {
@@ -40,21 +42,18 @@
     width: 50%;
   }
 }
-@media (min-width: 768px) {
-  
-}
 @media (min-width: 1024px) {
   .carouselContainer {
     width: 75%;
     margin: 0 auto;
   }
-  .arrowDesktop{
+  .arrowDesktop {
     display: flex;
   }
-  .leftArrow,.rightArrow{
-    display:none;
+  .leftArrow,
+  .rightArrow {
+    display: none;
   }
-  
 }
 @media (min-width: 1440px) {
   .carouselContainer {

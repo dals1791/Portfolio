@@ -6,7 +6,7 @@
   flex-direction: column;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 .imgContainer {
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 .cardText {
-  font-size: .8em;
+  font-size: 0.8em;
   width: 100%;
   height: 100%;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   text-align: center;
   padding: 0.5rem;
 }
-.cardSkills{
+.cardSkills {
   display: inline;
   margin: 0;
   padding: 0;
@@ -93,8 +93,10 @@
   font-weight: bold;
   font-size: 16px;
 }
-.cardButton:hover,.descriptionButton:hover,
-.cardButton:active, .descriptionButton:active {
+.cardButton:hover,
+.descriptionButton:hover,
+.cardButton:active,
+.descriptionButton:active {
   box-shadow: 0px 0px 12px rgba(90, 180, 123, 1);
   background: rgba(90, 180, 123, 1);
   color: rgba(0, 0, 0, 1);
@@ -103,7 +105,7 @@
   .cardContainer {
     min-width: 300px;
   }
-  .cardText{
+  .cardText {
     font-size: 1em;
   }
 }
@@ -114,9 +116,6 @@
   }
 }
 @media (min-width: 1024px) {
-  .cardContainer {
-    
-  }
   .cardText {
     font-size: 1.1em;
   }

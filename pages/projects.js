@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Layout from "../components/layout/layout";
-import Skills from "../components/skills";
 import Carousel from "../components/carousel/carousel";
-import ProjectCard from "../components/projectCard";
 import Sort from "../components/sort/sort";
 import styles from "../styles/projects.module.css";
 import { createClient } from "contentful";
@@ -42,23 +40,18 @@ const Projects = () => {
     getProjects();
   }, []);
 
-  const searchArray = (arr, name) => {
+  const sortSkills = (name) => {
     let sortedArr = [];
-    for (let i = 0; i < arr.length; i += 1) {
+    for (let i = 0; i < projects.length; i += 1) {
       if (
-        arr[i].fields.frontendTech.includes(name) ||
-        arr[i].fields.backendTech.includes(name)
+        projects[i].fields.frontendTech.includes(name) ||
+        projects[i].fields.backendTech.includes(name)
       ) {
-        sortedArr.push(arr[i]);
+        sortedArr.push(projects[i]);
       }
     }
-    sortedArr.length > 0
-      ? setSortedProjects(sortedArr)
-      : setSortedProjects(projects);
-  };
-  const sortSkills = (name) => {
-    searchArray(projects, name);
-  };
+      setSortedProjects(sortedArr)
+    };
 
   return (
     <Layout>
