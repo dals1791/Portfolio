@@ -6,8 +6,6 @@
   flex-direction: column;
   overflow: hidden;
 }
-.carouselContent {
-}
 .contentWrapper {
   display: flex;
   justify-content: space-between;
@@ -24,16 +22,39 @@
   width: fit-content;
   align-self: flex-end;
 }
+.arrowDesktop{
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: auto auto;
+  width: 100px;
+  height: 20rem;
+  background: rgba(0,0,0,.6);
+  color: white;
+  border-radius: 1rem;
+}
 @media (min-width: 375px) {
   .contentWrapper {
     width: 50%;
   }
+}
+@media (min-width: 768px) {
+  
 }
 @media (min-width: 1024px) {
   .carouselContainer {
     width: 75%;
     margin: 0 auto;
   }
+  .arrowDesktop{
+    display: flex;
+  }
+  .leftArrow,.rightArrow{
+    display:none;
+  }
+  
 }
 @media (min-width: 1440px) {
   .carouselContainer {
