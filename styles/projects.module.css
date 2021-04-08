@@ -13,6 +13,7 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  transition: all 1s linear;
 }
 .sortBar h4 {
   margin: 0;

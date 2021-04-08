@@ -67,6 +67,7 @@ const Projects = () => {
 
       <div className={styles.container}>
         <div className={styles.sortBar}>
+          Sort By Technology
           <Sort data={skills} sort={sortSkills} />
         </div>
         <main className={styles.main}>

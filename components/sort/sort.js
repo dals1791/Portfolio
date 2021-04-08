@@ -1,36 +1,25 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import styles from "./sort.module.css";
 
 const Sort = (props) => {
   const { data, sort } = props;
-  const [toggle, setToggle]=useState(false)
-  const handleToggle =()=>{
-    setToggle(toggle=>!toggle)
-  }
+  const [toggle, setToggle] = useState(false);
+  const handleToggle = () => {
+    setToggle((toggle) => !toggle);
+  };
 
   const getSkills = () => {
     return data.map((ele) => {
       let skills = ele.fields.skills;
-      return skills.map((skill) => {
+      return skills.map((skill, index) => {
         return (
           <>
-                {toggle? (<div className={styles.dropdownSkillContainer}>
-              <button
-                className={styles.sortButtonMobile}
-                onClick={() => {
-                  sort(skill);
-                }}
-              >
-                {skill}
-              </button>
-              </div>): null}
-        
-
             <button
               className={styles.sortButton}
               onClick={() => {
-                sort(skill);
+                sort(skill);handleToggle()
               }}
+              key={index}
             >
               {skill}
             </button>
@@ -42,9 +31,20 @@ const Sort = (props) => {
 
   return (
     <>
-      
-      <div className={styles.dropdownContainer} onClick={handleToggle}>
-          Sort By Skill
+      <button className={styles.dropdownButton} onClick={handleToggle}>
+        {toggle ? "▲" : "▼"}
+      </button>
+      {toggle ? (
+        <div className={styles.dropdownSkillContainer}>
+          <button
+            className={styles.sortButton}
+            onClick={() => {sort("All"); handleToggle();}}>
+            All
+          </button>
+          {getSkills()}
+        </div>
+      ) : null}
+      <div className={styles.skillContainer}>
       <button
         className={styles.sortButton}
         onClick={() => {
