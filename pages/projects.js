@@ -17,6 +17,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [sortedProjects, setSortedProjects] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [current, setCurrent] = useState(0);
 
   const getProjectProps = async () => {
     const projects = await client.getEntries({
@@ -68,17 +69,11 @@ const Projects = () => {
       <div className={styles.container}>
         <div className={styles.sortBar}>
           Sort By Technology
-          <Sort data={skills} sort={sortSkills} />
+          <Sort data={skills} sort={sortSkills} setCurrent={setCurrent}/>
         </div>
         <main className={styles.main}>
-          <Carousel data={sortedProjects} />
+          <Carousel data={sortedProjects} current={current} setCurrent={setCurrent}/>
         </main>
-        <div className={styles.skills}>
-          {/* All Icons are from "https://icons8.com" */}
-          {/* <h3 style={{margin: "0"}}>Skills</h3>
-          <hr /> */}
-          {/* {<Skills/>} */}
-        </div>
       </div>
     </Layout>
   );

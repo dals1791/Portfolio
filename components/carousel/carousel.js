@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./carousel.module.css";
 import ProjectCard from "../projectCard";
 
-const Carousel = ({ data }) => {
-  const [current, setCurrent] = useState(0);
+const Carousel = ({ data, current, setCurrent}) => {
+  
   let length = data.length;
 
   const nextCard = () => {
@@ -16,7 +16,6 @@ const Carousel = ({ data }) => {
   if (!Array.isArray(data) || length <= 0) {
     return null;
   }
-
   return (
     <>
       <div className={styles.carouselContainer}>

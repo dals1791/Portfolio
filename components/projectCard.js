@@ -73,7 +73,7 @@ const ProjectCard = (props) => {
                 className={styles.descriptionButton}
                 onClick={() => handleToggle(fields.title)}
               >
-                Info
+                More Info
               </button>
             )}
             <a
@@ -81,7 +81,7 @@ const ProjectCard = (props) => {
               className={styles.cardButton}
               target="_blank"
             >
-              Live
+              Live Link
             </a>
             <a
               href={fields.github}
@@ -97,8 +97,6 @@ const ProjectCard = (props) => {
       );
     });
   };
-
-  const background = "https://i.imgur.com/aNz6wUl.jpg?1";
   return <>{renderCards()} </>;
 };
 

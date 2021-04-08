@@ -1,23 +1,22 @@
 .carouselContainer {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .carouselContent {
-   
 }
 .contentWrapper {
   display: flex;
   justify-content: space-between;
-  width: calc(100%/2);
+  width: 100%;
   height: 100%;
 }
-.carouselButtonContainer{
-    display: flex;
-    flex-direction: row;
+.carouselButtonContainer {
+  display: flex;
+  flex-direction: row;
 }
 .leftArrow,
 .rightArrow {
@@ -25,16 +24,20 @@
   width: fit-content;
   align-self: flex-end;
 }
-
+@media (min-width: 375px) {
+  .contentWrapper {
+    width: 50%;
+  }
+}
 @media (min-width: 1024px) {
-    .carouselContainer {
-      width: 75%;
-      margin: 0 auto;
-    }
+  .carouselContainer {
+    width: 75%;
+    margin: 0 auto;
   }
-  @media (min-width: 1440px) {
-    .carouselContainer {
-      width: 50%;
-      margin: 0 auto;
-    }
+}
+@media (min-width: 1440px) {
+  .carouselContainer {
+    width: 50%;
+    margin: 0 auto;
   }
+}

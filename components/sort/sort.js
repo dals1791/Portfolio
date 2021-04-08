@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import styles from "./sort.module.css";
 
 const Sort = (props) => {
-  const { data, sort } = props;
+  const { data, sort, setCurrent } = props;
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
     setToggle((toggle) => !toggle);
   };
+  const handleCurrent =()=>{
+    setCurrent(0);
+  }
 
   const getSkills = () => {
     return data.map((ele) => {
@@ -17,7 +20,7 @@ const Sort = (props) => {
             <button
               className={styles.sortButton}
               onClick={() => {
-                sort(skill);handleToggle()
+                sort(skill);handleToggle();handleCurrent();
               }}
               key={index}
             >
@@ -38,7 +41,7 @@ const Sort = (props) => {
         <div className={styles.dropdownSkillContainer}>
           <button
             className={styles.sortButton}
-            onClick={() => {sort("All"); handleToggle();}}>
+            onClick={() => {sort("All"); handleToggle();handleCurrent();}}>
             All
           </button>
           {getSkills()}
