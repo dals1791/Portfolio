@@ -12,8 +12,10 @@ const client = createClient({
   space: process.env.NEXT_PUBLIC_SPACE_ID,
   accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
 })
+
 const Projects = () => {
     const [projects, setProjects] = useState([])
+    const [sortedProjects, setSortedProjects]= useState([])
     const [skills, setSkills] = useState([])
   
   const getProjectProps = async()=>{
@@ -36,8 +38,20 @@ useEffect(()=>{const getProjects=async()=>{
   } 
     getProjects()
   }, [])
-  console.log("This is is projects", projects)
-  console.log("this is skills", skills)
+  const searchArray=(arr, name)=>{
+    let sortedArr = []
+    for (let i=0; i<arr.length; i+=1){
+      if (arr[i].fields.frontendTech.includes(name) || arr[i].fields.backendTech.includes(name)){
+        sortedArr.push(arr[i])
+      }
+    }
+   sortedArr.length>0? setSortedProjects(sortedArr): setSortedProjects(projects)
+  }
+  const sortSkills =(name)=>{
+   searchArray(projects, name)
+  }
+  console.log("this is projects", projects)
+  console.log('This is sorted Projects', sortedProjects)
   return (
     <Layout>
       <Head>
@@ -46,10 +60,10 @@ useEffect(()=>{const getProjects=async()=>{
       
       <div className={styles.container}>
         <div className={styles.sortBar}>
-          <Sort/>
+          <Sort data={skills} sort={sortSkills}/>
           </div>
         <main className={styles.main}>
-         <Carousel data={projects}/> 
+         <Carousel data={sortedProjects}/> 
         </main>
         <div className={styles.skills}>
           {/* All Icons are from "https://icons8.com" */}

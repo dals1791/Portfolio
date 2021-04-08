@@ -41,10 +41,7 @@ const ProjectCard = (props) => {
           setSize(1)
         }
       }
-      useEffect(()=>{handleWindow()
-
-      }, [window.innerWidth])
-      console.log(size)
+    
       return (
         <>
          <div key={fields.title} className={styles.cardContainer} style={{ transform: `translateX(-${current * 106}%)` }}>
