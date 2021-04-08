@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Layout from "../components/layout/layout";
-import Carousel from "../components/carousel/carousel";
-import Sort from "../components/sort/sort";
+import Layout from "../components/layout/layout.js";
+import Carousel from "../components/carousel/carousel.js";
+import Sort from "../components/sort/sort.js";
 import styles from "../styles/projects.module.css";
 import { createClient } from "contentful";
 
