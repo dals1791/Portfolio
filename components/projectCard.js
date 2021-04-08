@@ -33,14 +33,6 @@ const ProjectCard = (props) => {
         display.display = "none";
         display.box = "none";
       }
-      const handleWindow =()=>{
-        if(window.innerWidth>=768){
-          setSize(2)
-        }
-           else{
-          setSize(1)
-        }
-      }
     
       return (
         <>
