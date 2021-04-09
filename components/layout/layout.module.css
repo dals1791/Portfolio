@@ -4,8 +4,6 @@
   justify-content: space-between;
   align-items: baseline;
   padding: .5rem;
-  /* background: black;
-  color: rgba(28,231,131, 1); */
 }
 .navLinks{
   display: flex;

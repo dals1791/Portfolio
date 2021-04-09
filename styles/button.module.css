@@ -1,9 +1,6 @@
 /* button animation modified from https://codepen.io/mccombsc/pen/ZEzxWPy */
-
 .button {
   margin-top: 5rem;
-  /* background: rgba(28,231,131, 1); */
-  /* box-shadow: 4px 4px 12px rgba(126, 202, 156, 1); */
   color: rgb(255,255,255);
   border-radius: 10rem;
   width: 150px;
@@ -16,6 +13,7 @@
   transition: all 0.3s ease-in-out 0s;
   position: absolute;
   top:60%;
+  /* left: 0%; */
   z-index: 1;
   
 }

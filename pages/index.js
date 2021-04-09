@@ -4,7 +4,9 @@ import Link from "next/link";
 // CSS Modules==================================
 import styles from "../styles/home.module.css";
 import utilityStyle from "../styles/utility.module.css";
-import buttonStyles from "../styles/button.module.css";
+import buttonStyle from "../styles/button.module.css";
+import buttonContactStyle from "../styles/buttonContact.module.css";
+import buttonAboutStyle from "../styles/buttonAbout.module.css";
 
 export default function Home() {
   
@@ -33,8 +35,17 @@ export default function Home() {
           </div>
         </div>
         <Link href="/projects">
-          <a className={buttonStyles.button}>Projects</a>
+          <a className={buttonStyle.button}>Projects</a>
         </Link>
+        {/* <div className={styles.buttonContainer}>
+        
+        <Link href="/about-me">
+          <a className={buttonAboutStyle.button}>Biography</a>
+        </Link>
+        <Link href="/contact">
+          <a className={buttonContactStyle.button}>Contacts</a>
+        </Link>
+        </div> */}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
   background: rgb(0, 0, 0);
   color: #ffffff;
 }
@@ -28,4 +28,11 @@
 }
 .brand p {
   margin: 0 0 0 2rem;
+}
+.buttonContainer{
+  border: 1px solid white;
+  position: absolute;
+  bottom: 0;
+  height: 40vh;
+  width: 100%;
 }
