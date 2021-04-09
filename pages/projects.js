@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout from "../components/layout/layout.js";
 import Carousel from "../components/carousel/carousel.js";
 import Sort from "../components/sort/sort.js";
+import Footer from '../components/footer/footer'
 import styles from "../styles/projects.module.css";
 import { createClient } from "contentful";
 
@@ -75,6 +76,7 @@ const Projects = () => {
         <main className={styles.main}>
           <Carousel data={sortedProjects} current={current} setCurrent={setCurrent}/>
         </main>
+        
       </div>
     </Layout>
   );

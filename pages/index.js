@@ -1,3 +1,4 @@
+// NextJs ======================================
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,16 +8,16 @@ import utilityStyle from "../styles/utility.module.css";
 import buttonStyle from "../styles/button.module.css";
 import buttonContactStyle from "../styles/buttonContact.module.css";
 import buttonAboutStyle from "../styles/buttonAbout.module.css";
+// Components ======================================
+import Footer from '../components/footer/footer'
 
 export default function Home() {
-  
   return (
-    <div>
+    <>
       <Head>
         <title>Sean's Portfolio</title>
       </Head>
       <div className={styles.container}>
-       
         <div className={styles.me}>
           <Image
             src="/images/me.jpg"
@@ -28,25 +29,29 @@ export default function Home() {
           />
         </div>
         <div className={styles.brandContainer}>
-          <h1>Hi I'm <span className={styles.name} >Sean</span>!</h1>
+          <h1>
+            Hi I'm <span className={styles.name}>Sean</span>!
+          </h1>
 
           <div className={styles.brand}>
             <p>Fullstack Developer and Engineer</p>
           </div>
         </div>
-        <Link href="/projects">
-          <a className={buttonStyle.button}>Projects</a>
-        </Link>
-        {/* <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainer}>
+          <Link href="/projects">
+            <a className={buttonStyle.button}>Projects</a>
+          </Link>
+          <Link href="/about-me">
+            <a className={buttonAboutStyle.button}>Biography</a>
+          </Link>
+          <Link href="/contact">
+            <a className={buttonContactStyle.button}>Contact</a>
+          </Link>
+        </div>
         
-        <Link href="/about-me">
-          <a className={buttonAboutStyle.button}>Biography</a>
-        </Link>
-        <Link href="/contact">
-          <a className={buttonContactStyle.button}>Contacts</a>
-        </Link>
-        </div> */}
+        <Footer/>
+        
       </div>
-    </div>
+    </>
   );
 }

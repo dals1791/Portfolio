@@ -2,6 +2,7 @@
   height: 100vh;
   padding: 0 0.5rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-top: 5vh;
@@ -30,9 +31,11 @@
   margin: 0 0 0 2rem;
 }
 .buttonContainer{
-  border: 1px solid white;
-  position: absolute;
-  bottom: 0;
-  height: 40vh;
+  position: relative;
+ /* bottom: 5vh;
+  left:0px; */
+  height: 30vh;
   width: 100%;
+ 
 }
+

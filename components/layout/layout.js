@@ -1,5 +1,9 @@
-import styles from "./layout.module.css";
+// Nextjs ==============================
 import Link from "next/link";
+// Styles ==============================
+import styles from "./layout.module.css";
+// Components============================
+import Footer from '../footer/footer'
 
 const Layout = ({ children, home }) => {
   return (
@@ -22,7 +26,10 @@ const Layout = ({ children, home }) => {
         </div>
       </header>
       <main className={styles.main}>{children}</main>
-      {/* <footer className={styles.footer}> This is footer Section</footer> */}
+      <footer className={styles.footer}>
+      <Footer/>
+      </footer>
+      
     </>
   );
 };
