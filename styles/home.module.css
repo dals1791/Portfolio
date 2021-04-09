@@ -32,10 +32,12 @@
 }
 .buttonContainer{
   position: relative;
- /* bottom: 5vh;
-  left:0px; */
   height: 30vh;
   width: 100%;
  
 }
-
+@media (min-width: 1024px){
+  .buttonContainer{
+    margin-top: 5em;
+  }
+}

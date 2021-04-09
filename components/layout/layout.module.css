@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: baseline;
   padding: .5rem;
+  height: 15%;
 }
 .navLinks{
   display: flex;
@@ -11,16 +12,14 @@
   width: 70%;
 }
 .main {
-  /* width: 100vh; */
-  /* height: 100vh; */
+  height: 30%;
 
  
 }
 .footer {
-  position: relative;
+  position: absolute;
   text-align: center;
-  /* height: 5vh; */
+  height: 5%;
   width: 100%;
-  /* bottom: 0px; */
-  border-top: 1px solid;
+  bottom: 0%;
 }
