@@ -36,6 +36,9 @@
   height: 10rem;
   border-radius: 1rem;
 }
+.leftArrow:hover, .rightArrow:hover, .arrowDesktop:hover{
+  background: rgba(28, 231, 131, 1);
+}
 @media (min-width: 321px) {
   .carouselContainer {
     width: 88%;
