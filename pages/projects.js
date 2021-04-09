@@ -16,6 +16,7 @@ const Projects = () => {
   const [sortedProjects, setSortedProjects] = useState([]);
   const [skills, setSkills] = useState([]);
   const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(projects.length)
 
   const getProjectProps = async () => {
     const projects = await client.getEntries({
@@ -36,12 +37,16 @@ const Projects = () => {
       setProjects([...allProjects]);
       setSkills([...allSkills]);
       setSortedProjects([...allProjects]);
+      setCount(allProjects.length)
     };
     getProjects();
   }, []);
 
   const sortSkills = (name) => {
     let sortedArr = [];
+    if (name==="All"){
+      sortedArr=projects
+    }
     for (let i = 0; i < projects.length; i += 1) {
       if (
         projects[i].fields.frontendTech.includes(name) ||
@@ -51,6 +56,7 @@ const Projects = () => {
       }
     }
       setSortedProjects(sortedArr)
+      setCount(sortedArr.length)
     };
 
   return (
@@ -61,8 +67,10 @@ const Projects = () => {
 
       <div className={styles.container}>
         <div className={styles.sortBar}>
-          Sort By Technology
+          <p style={{margin: ".5rem"}}>Sort By Technology</p>
+          <div style={{margin: ".5rem"}}># of Apps: {count}</div>
           <Sort data={skills} sort={sortSkills} setCurrent={setCurrent}/>
+          
         </div>
         <main className={styles.main}>
           <Carousel data={sortedProjects} current={current} setCurrent={setCurrent}/>

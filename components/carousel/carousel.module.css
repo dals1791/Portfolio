@@ -1,5 +1,5 @@
 .carouselContainer {
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -9,7 +9,6 @@
 .contentWrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   height: 100%;
 }
 .carouselButtonContainer {
@@ -34,12 +33,29 @@
   font-weight: bold;
   margin: auto auto;
   width: 100px;
-  height: 20rem;
+  height: 10rem;
   border-radius: 1rem;
 }
-@media (min-width: 375px) {
+@media (min-width: 321px) {
+  .carouselContainer {
+    width: 88%;
+  }
+}
+@media (min-width: 410px) {
+  .carouselContainer {
+    width: 76%;
+  }
+}
+@media (min-width: 768px) {
+  .carouselContainer {
+    width: 100%;
+  }
   .contentWrapper {
-    width: 50%;
+    width: 75%;
+  }
+  .leftArrow,
+  .rightArrow {
+    margin: 0;
   }
 }
 @media (min-width: 1024px) {

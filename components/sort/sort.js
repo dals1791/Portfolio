@@ -59,6 +59,8 @@ const Sort = (props) => {
           className={styles.sortButton}
           onClick={() => {
             sort("All");
+            handleToggle();
+            handleCurrent();
           }}
         >
           All

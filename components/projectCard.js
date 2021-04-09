@@ -47,7 +47,7 @@ const ProjectCard = (props) => {
           <div
             key={fields.title}
             className={styles.cardContainer}
-            style={{ transform: `translateX(-${current * 106}%)` }}
+            style={{ transform: `translateX(-${current * 104}%)` }}
           >
             <div
               className={styles.imgContainer}

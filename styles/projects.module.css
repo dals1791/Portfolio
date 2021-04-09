@@ -7,11 +7,12 @@
 }
 
 .sortBar {
+  display: flex;
   height: 30%;
+  width: 100%;
   padding: 1rem 1em;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -20,4 +21,9 @@
 }
 .skills {
   align-self: center;
+}
+@media (min-width: 768px){
+  .sortBar{
+    width: 75%;
+  }
 }

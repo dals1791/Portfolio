@@ -1,7 +1,7 @@
 .cardContainer {
   min-width: 300px;
   height: 350px;
-  margin: 2% 3%;
+  margin: 2% 2%;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -106,7 +106,7 @@
     min-width: 300px;
   }
   .cardText {
-    font-size: 1em;
+    font-size: .85em;
   }
 }
 @media (min-width: 768px) {
