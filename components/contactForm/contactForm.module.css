@@ -14,19 +14,37 @@
   height: 50vh;
 }
 .emailInput {
-    padding: 0 .5rem;
+    padding: 0 1rem;
   background: rgba(0, 0, 0, 0.4);
   border: none;
   height: 15%;
   color:rgba(28, 231, 131, 1);
+  box-shadow: 0px 0px 6px rgba(28, 231, 131, 1);
+  margin-bottom: .5rem 0;
+  
 }
 .messageInput {
-  padding: 0.5rem;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
   border: none;
   height: 50%;
   color: rgba(28, 231, 131, 1);
   text-align: top;
+  box-shadow: 0px 0px 6px rgba(28, 231, 131, 1);
+  margin-bottom: .5rem 0;
 }
 .submitButton {
+    width: 30%;
+    height: 10%;
+    margin:  0 auto;
+    margin-top: .5rem;
+    border-radius: .25rem;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.submitButton:hover, .submitButton:active{
+    background: rgb(0,0,0);
+    color: rgba(28, 231, 131, 1);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
 }
