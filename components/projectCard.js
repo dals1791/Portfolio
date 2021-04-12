@@ -77,7 +77,7 @@ const ProjectCard = (props) => {
             </div>
             <div className={styles.cardInfoContainer}>
               <h2 className={styles.cardTitle}>{fields.title}</h2>
-              <button className={styles.descriptionButton}>Preview</button>
+              {/* <button className={styles.descriptionButton}>Preview</button> */}
               {toggle && fields.title === title ? (
                 <button
                   className={styles.descriptionButton}
