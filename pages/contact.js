@@ -1,12 +1,15 @@
-import Layout from "../components/layout/layout.js";
+
 import Head from 'next/head'
+import Layout from "../components/layout/layout.js";
+import ContactForm from '../components/contactForm/contactForm'
 const Contact = () => {
   return (
     <Layout>
         <Head>
         <title>Contact Sean!</title>
       </Head>
-      <h1>Contact Page</h1>
+      
+      <ContactForm/>
     </Layout>
   );
 };
