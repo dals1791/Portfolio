@@ -16,7 +16,8 @@
   flex-wrap: wrap;
   margin: 0 auto;
 }
-.sortBar p, .sortBar div{
+.sortBar p,
+.sortBar div {
   height: fit-content;
 }
 .main {
@@ -25,39 +26,35 @@
   align-items: center;
   height: 100%;
 }
-.mainDesktop{
+.mainDesktop {
   display: none;
   flex-wrap: wrap;
   justify-content: space-evenly;
   height: 100%;
   max-width: 1400px;
   margin: 0 auto;
-
 }
 .skills {
   align-self: center;
 }
-@media (min-width: 412px){
-  .sortBar{
+@media (min-width: 412px) {
+  .sortBar {
     width: 60%;
   }
 }
-@media (min-width: 768px){
-  .sortBar{
+@media (min-width: 768px) {
+  .sortBar {
     width: 75%;
   }
-  .main{
+  .main {
     display: none;
   }
-  .mainDesktop{
+  .mainDesktop {
     display: flex;
   }
 }
-@media (min-width: 1440px){
- 
-  .sortBar{
+@media (min-width: 1440px) {
+  .sortBar {
     width: 50%;
-    /* padding: 0; */
   }
-  
 }
