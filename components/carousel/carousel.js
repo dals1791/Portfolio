@@ -19,6 +19,7 @@ const Carousel = ({ data, current, setCurrent }) => {
         ❮
       </button>
       <div className={styles.carouselContainer}>
+      
         <div className={styles.carouselContent}>
           <div className={styles.contentWrapper}>
             <ProjectCard data={data} current={current} />

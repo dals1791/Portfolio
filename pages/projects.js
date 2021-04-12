@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Layout from "../components/layout/layout.js";
 import Carousel from "../components/carousel/carousel.js";
+import ProjectCard from '../components/projectCard';
 import Sort from "../components/sort/sort.js";
 import Footer from '../components/footer/footer'
 import styles from "../styles/projects.module.css";
@@ -75,6 +76,9 @@ const Projects = () => {
         </div>
         <main className={styles.main}>
           <Carousel data={sortedProjects} current={current} setCurrent={setCurrent}/>
+        </main>
+        <main className={styles.mainDesktop}>
+            <ProjectCard data={sortedProjects}/>
         </main>
         
       </div>
