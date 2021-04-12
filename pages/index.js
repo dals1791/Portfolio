@@ -41,8 +41,8 @@ export default function Home() {
           <Link href="/projects">
             <a className={buttonStyle.button}>Projects</a>
           </Link>
-          <Link href="/about-me">
-            <a className={buttonAboutStyle.button}>Biography</a>
+          <Link href="/about">
+            <a className={buttonAboutStyle.button}>About</a>
           </Link>
           <Link href="/contact">
             <a className={buttonContactStyle.button}>Contact</a>

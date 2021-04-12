@@ -17,8 +17,8 @@ const Layout = ({ children, home }) => {
             <a>Projects</a>
           </Link>
           
-          <Link href="/about-me">
-            <a>Biography</a>
+          <Link href="/about">
+            <a>About</a>
           </Link>
           <Link href="/contact">
             <a>Contact</a>

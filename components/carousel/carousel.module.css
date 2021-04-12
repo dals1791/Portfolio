@@ -19,7 +19,7 @@
 }
 .leftArrow,
 .rightArrow {
-  height: 10%;
+  height: fit-content;
   width: fit-content;
   align-self: flex-end;
   margin: 0.5rem;
@@ -42,6 +42,7 @@
 @media (min-width: 321px) {
   .carouselContainer {
     width: 88%;
+    margin: 0;
   }
 }
 @media (min-width: 410px) {
@@ -51,7 +52,7 @@
 }
 @media (min-width: 768px) {
   .carouselContainer {
-    width: 100%;
+    width: 90%;
   }
   .contentWrapper {
     width: 75%;
@@ -64,7 +65,7 @@
 @media (min-width: 1024px) {
   .carouselContainer {
     width: 75%;
-    margin: 0 auto;
+    
   }
   .arrowDesktop {
     display: flex;
@@ -76,7 +77,17 @@
 }
 @media (min-width: 1440px) {
   .carouselContainer {
-    width: 50%;
-    margin: 0 auto;
+    width: 60%;
   }
+  .contentWrapper{
+    width: 60%;
+  }
+  .carouselContent{
+    width: 60%;
+  }
+  .arrowDesktop{
+
+    margin: auto .5rem;
+  }
+  
 }

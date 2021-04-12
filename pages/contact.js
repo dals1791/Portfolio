@@ -1,6 +1,5 @@
 import Layout from "../components/layout/layout.js";
 import Head from 'next/head'
-import Link from "next/link";
 const Contact = () => {
   return (
     <Layout>

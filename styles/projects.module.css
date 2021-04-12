@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 95%;
+  height: 100%;
   justify-content: space-between;
+  
 }
 
 .sortBar {
@@ -12,18 +13,39 @@
   width: 100%;
   padding: 1rem 1em;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
 }
+.sortBar p, .sortBar div{
+  height: fit-content;
+}
 .main {
   display: flex;
+  justify-content: center;
 }
 .skills {
   align-self: center;
+}
+@media (min-width: 412px){
+  .sortBar{
+    width: 60%;
+  }
 }
 @media (min-width: 768px){
   .sortBar{
     width: 75%;
   }
+}
+@media (min-width: 1440px){
+  .main{
+    width: 75%;
+    margin: 0 auto;
+  }
+  .sortBar{
+    width: 50%;
+    padding: 0;
+  }
+  
 }
