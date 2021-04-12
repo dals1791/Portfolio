@@ -35,7 +35,7 @@
 }
 .submitButton {
     width: 30%;
-    height: 10%;
+    height: fit-content;
     margin:  0 auto;
     margin-top: .5rem;
     border-radius: .25rem;
