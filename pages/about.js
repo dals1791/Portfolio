@@ -28,8 +28,8 @@ const AboutMe = () => {
             <p>
               {" "}
               I am a full-stack software engineer who exemplifies a can-do
-              attitude and willingness to dive into the unknown. My unique
-              experience as a biomechanical engineer enables me to approach
+              attitude and willingness to dive into the unknown. My
+              6 years of experience as a bio-mechanical engineer (BSME) enables me to uniquely approach
               every challenge with a passion and desire to solve technical
               problems that will improve the life we live today.{" "}
             </p>
