@@ -27,7 +27,7 @@ const AboutMe = () => {
           <section className={styles.section2}>
             <p>
               {" "}
-              I am full-stack software engineer who exemplifies a can-do
+              I am a full-stack software engineer who exemplifies a can-do
               attitude and willingness to dive into the unknown. My unique
               experience as a biomechanical engineer enables me to approach
               every challenge with a passion and desire to solve technical
