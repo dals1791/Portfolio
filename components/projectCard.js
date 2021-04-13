@@ -53,6 +53,8 @@ const ProjectCard = (props) => {
               className={styles.imgContainer}
               style={{
                 backgroundImage: `url(${img})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
               onClick={() => handleToggle(fields.title)}
             >
