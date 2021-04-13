@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/projectCard.module.css";
-import Image from "next/image";
 
 const ProjectCard = (props) => {
   const { data, current } = props;

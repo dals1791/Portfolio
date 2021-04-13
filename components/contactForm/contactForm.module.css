@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   justify-content: flex-start;
-  height: 100vh;
+  height: 100%;
 }
 .contactForm {
   display: flex;
@@ -15,14 +15,13 @@
   height: 50vh;
 }
 .emailInput {
-    padding: 0 1rem;
+  padding: 0 1rem;
   background: rgba(0, 0, 0, 0.4);
   border: none;
   height: 15%;
-  color:rgba(28, 231, 131, 1);
+  color: rgba(28, 231, 131, 1);
   box-shadow: 0px 0px 6px rgba(28, 231, 131, 1);
-  margin-bottom: .5rem 0;
-  
+  margin-bottom: 0.5rem 0;
 }
 .messageInput {
   padding: 1rem;
@@ -32,25 +31,27 @@
   color: rgba(28, 231, 131, 1);
   text-align: top;
   box-shadow: 0px 0px 6px rgba(28, 231, 131, 1);
-  margin-bottom: .5rem 0;
+  margin-bottom: 0.5rem 0;
 }
 .submitButton {
-    width: 30%;
-    height: fit-content;
-    margin:  0 auto;
-    margin-top: .5rem;
-    border-radius: .25rem;
-    border: none;
-    font-size: 1.5rem;
-    text-align: center;
+  width: 30%;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
 }
-.submitButton:hover, .submitButton:active{
-    background: rgb(0,0,0);
-    color: rgba(28, 231, 131, 1);
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
+.submitButton:hover,
+.submitButton:active {
+  background: rgb(0, 0, 0);
+  color: rgba(28, 231, 131, 1);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
 }
-@media (min-width: 768px){
-  .formContainer{
+@media (min-width: 768px) {
+  .formContainer {
     font-size: 32px;
+    height: 100vh;
   }
 }
