@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Sean's Portfolio</title>
         <meta property="og:title" content="Sean's Portfolio" />
-        <meta property="og:image" content="//https://i.imgur.com/68Kc8BN.png" />
+        <meta property="og:image" content="https://i.imgur.com/68Kc8BN.png" />
       </Head>
       <div className={styles.container}>
         <div className={styles.me}>
