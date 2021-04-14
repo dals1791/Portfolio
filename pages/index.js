@@ -9,13 +9,15 @@ import buttonStyle from "../styles/button.module.css";
 import buttonContactStyle from "../styles/buttonContact.module.css";
 import buttonAboutStyle from "../styles/buttonAbout.module.css";
 // Components ======================================
-import Footer from '../components/footer/footer'
+import Footer from "../components/footer/footer";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Sean's Portfolio</title>
+        <meta property="og:title" content="Sean's Portfolio" />
+        <meta property="og:image" content="/images/MetaImage.png" />
       </Head>
       <div className={styles.container}>
         <div className={styles.me}>
@@ -48,9 +50,8 @@ export default function Home() {
             <a className={buttonContactStyle.button}>Contact</a>
           </Link>
         </div>
-        
-        <Footer/>
-        
+
+        <Footer />
       </div>
     </>
   );
