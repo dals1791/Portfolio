@@ -1,4 +1,6 @@
+// CSS Modules =========================================
 import styles from "./carousel.module.css";
+// Components =========================================
 import ProjectCard from "../projectCard";
 
 const Carousel = ({ data, current, setCurrent }) => {
@@ -19,7 +21,6 @@ const Carousel = ({ data, current, setCurrent }) => {
         ❮
       </button>
       <div className={styles.carouselContainer}>
-      
         <div className={styles.carouselContent}>
           <div className={styles.contentWrapper}>
             <ProjectCard data={data} current={current} />

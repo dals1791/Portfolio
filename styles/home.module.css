@@ -30,14 +30,13 @@
 .brand p {
   margin: 0 0 0 2rem;
 }
-.buttonContainer{
+.buttonContainer {
   position: relative;
   height: 30vh;
   width: 100%;
- 
 }
-@media (min-width: 1024px){
-  .buttonContainer{
+@media (min-width: 1024px) {
+  .buttonContainer {
     margin-top: 5em;
   }
 }

@@ -47,13 +47,10 @@
   }
   .skillContainer {
     display: flex;
-   
   }
   .sortButton {
     color: white;
     border: 1px solid;
     height: fit-content;
   }
-  
 }
-

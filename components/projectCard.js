@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
+// CSS Modules =========================================
 import styles from "../styles/projectCard.module.css";
 
 const ProjectCard = (props) => {

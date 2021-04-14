@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+// Nextjs =========================================
 import Head from "next/head";
+// Components =========================================
 import Layout from "../components/layout/layout.js";
 import Carousel from "../components/carousel/carousel.js";
 import ProjectCard from '../components/projectCard';
 import Sort from "../components/sort/sort.js";
-import Footer from '../components/footer/footer'
+// CSS Modules =========================================
 import styles from "../styles/projects.module.css";
+// Contentful =========================================
 import { createClient } from "contentful";
 
 const client = createClient({

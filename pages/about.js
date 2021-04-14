@@ -1,8 +1,12 @@
+// Nextjs =========================================
 import Head from "next/head";
 import Image from "next/image";
+//Components =========================================
 import Layout from "../components/layout/layout.js";
+// CSS Modules =========================================
 import styles from "../styles/about.module.css";
 import utilityStyle from "../styles/utility.module.css";
+
 const AboutMe = () => {
   return (
     <>
@@ -20,7 +24,6 @@ const AboutMe = () => {
               quality={100}
               layout="responsive"
               loading="lazy"
-        
               alt="Sean at Angel's Landing, Zion National Park"
             />
           </section>
@@ -28,10 +31,10 @@ const AboutMe = () => {
             <p>
               {" "}
               I am a full-stack software engineer who exemplifies a can-do
-              attitude and willingness to dive into the unknown. My
-              6 years of experience as a bio-mechanical engineer (BSME) enables me to uniquely approach
-              every challenge with a passion and desire to solve technical
-              problems that will improve the life we live today.{" "}
+              attitude and willingness to dive into the unknown. My 6 years of
+              experience as a bio-mechanical engineer (BSME) enables me to
+              uniquely approach every challenge with a passion and desire to
+              solve technical problems that will improve the life we live today.{" "}
             </p>
           </section>
           <section className={styles.section3}>
