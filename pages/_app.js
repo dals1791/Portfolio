@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta property="og:title" content="Sean's Portfolio" />
-        <meta property="og:image" content="https://i.imgur.com/68Kc8BN.png" />
+        <meta property="og:image" content="/images/metaimage.png" />
       </Head>
       <Component {...pageProps} />
     </>
